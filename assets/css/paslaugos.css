@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+    color: #333;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 26px;
+    font-weight: bold;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 650px;
+    height: 2px;
+    background-color: #cc6600;
+    margin: 10px auto 30px;
+  }
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px 40px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #5c3d1f;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: calc(25% - 20px);
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .card li {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+    font-size: 15px;
+  }
+
+  .card li:last-child {
+    border-bottom: none;
+  }
+
+/* Responsive - mažesniems ekranams */
+@media (max-width: 1200px) {
+    .card {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 660px) {
+    .card {
+      width: 100%;
+    }
+}

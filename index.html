@@ -3,11 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Grupinis darbas</title>
 </head>
 <body>
     <header>???</header>
-    <main>???</main>
+    <main>
+        <div class="Kontaktai">
+            <b>Kontaktai </b><br>
+            <bold>UAB Projektorius</bold><br>
+            <b>Tel.</b><bold>+370 663 66111</bold><br>
+            <b>E.Paštas</b><bold>  darbas@darbas.lt</bold><br>
+            <b>Adresas</b><bold>  Gatvė 3 namas 5</bold><br>
+            <b>Įmonės kodas</b><bold>1000235</bold><br>
+            <b>PVM kodas:</b><bold>  LT100023511</bold><br>
+            <b>Sąskaita:</b><bold>  LT48 7300 0101 6920 6962 Swedbank</bold>
+
+        </div>
+        <div class="Forma">
+            <form action="http://localhost:8080/kontaktai" method="POST" target="_blank">
+                <label for="var">Jūsų vardas:  </label>
+                <input name="firstname" type="text" id="var" required /><br>
+                <label for="eml">E.paštas: </label>
+                <input name="firstname" type="email" id="eml" required /><br>
+                <label for="tel">Telefonas </label>
+                <input name="firstname" type="email" id="tel" required /><br>
+                <label for="var">Pranešimas:</lable><br>
+                <label for="zinute">
+                <textarea name="message" rows="20" cols="50" id="zinute">Tavo zinute.</textarea>
+
+
+        </div>
+    </main>
     <footer>???</footer>
 </body>
 </html>
