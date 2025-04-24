@@ -1,3 +1,4 @@
+/* Body Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -17,12 +18,21 @@ h2 {
 h2::after {
     content: "";
     display: block;
-    width: 650px;
+    width: 0;
     height: 2px;
     background-color: #cc6600;
     margin: 10px auto 30px;
+    animation: apatineLinijaH2 1s ease-in-out forwards;
   }
 
+  /* Aprašom animacijos veiksmus */
+@keyframes apatineLinijaH2 {
+  to {
+    width: 650px;
+  }
+}
+
+/* Cards Container */
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -42,11 +52,19 @@ h2::after {
     min-width: 260px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.5s ease-in-out forwards;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cards-container .card:nth-child(odd):hover {
+  transform: scale(1.25) rotate(2deg);
+}
+
+.cards-container .card:nth-child(even):hover {
+  transform: scale(1.25) rotate(-2deg);
 }
 
 .card ul {
