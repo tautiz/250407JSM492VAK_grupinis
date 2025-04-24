@@ -7,7 +7,16 @@
     <title>Grupinis darbas</title>
 </head>
 <body>
-    <header>???</header>
+    <header>
+        <nav class="top-nav">
+            <ul>
+            <li><a href="index.html">Pagrindinis</a></li>
+            <li><a href="#">Paslaugos</a></li>
+            <li><a href="#">Kontaktai</a></li>
+            <li><a href="#">Apie mus</a></li>
+        </ul>
+    </nav>
+</header>
     <main>
         <div class="Kontaktai">
             <b>Kontaktai </b><br>
@@ -22,18 +31,22 @@
         </div>
         <div class="Forma">
             <form action="http://localhost:8080/kontaktai" method="POST" target="_blank">
-                <label for="var">Jūsų vardas:  </label>
+                <label for="var">Jūsų vardas:</label>
                 <input name="firstname" type="text" id="var" required /><br>
-                <label for="eml">E.paštas: </label>
-                <input name="firstname" type="email" id="eml" required /><br>
-                <label for="tel">Telefonas </label>
-                <input name="firstname" type="email" id="tel" required /><br>
-                <label for="var">Pranešimas:</lable><br>
-                <label for="zinute">
-                <textarea name="message" rows="20" cols="50" id="zinute">Tavo zinute.</textarea>
-
-
+        
+                <label for="eml">E.paštas:</label>
+                <input name="email" type="email" id="eml" required /><br>
+        
+                <label for="tel">Telefonas:</label>
+                <input name="phone" type="tel" id="tel" required /><br>
+        
+                <label for="zinute">Pranešimas:</label><br>
+                <textarea name="message" rows="5" cols="50" id="zinute" required>Tavo žinutė.</textarea><br>
+        
+                <button type="submit">Siųsti</button>
+            </form>
         </div>
+        
     </main>
     <footer>???</footer>
 </body>
