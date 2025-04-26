@@ -9,32 +9,45 @@
 <body>
     <header>???</header>
     <main>
-        <div class="Kontaktai">
-            <b>Kontaktai </b><br>
-            <bold>UAB Projektorius</bold><br>
-            <b>Tel.</b><bold>+370 663 66111</bold><br>
-            <b>E.Paštas</b><bold>  darbas@darbas.lt</bold><br>
-            <b>Adresas</b><bold>  Gatvė 3 namas 5</bold><br>
-            <b>Įmonės kodas</b><bold>1000235</bold><br>
-            <b>PVM kodas:</b><bold>  LT100023511</bold><br>
-            <b>Sąskaita:</b><bold>  LT48 7300 0101 6920 6962 Swedbank</bold>
-
+        <div class="kontaktai">
+            <ul>
+                <li><b>Kontaktai:</b> Grupė "250407JSM492VAK"</li>
+                <li><b>Tel.:</b> +370 663 66111</li>
+                <li><b>E. paštas:</b> darbas@darbas.lt</li>
+                <li><b>Adresas:</b> Gatvė 3 namas 5</li>
+                <li><b>Įmonės kodas:</b> 1000235</li>
+                <li><b>PVM kodas:</b> LT100023511</li>
+                <li><b>Sąskaita:</b> LT48 7300 0101 0000 0000 Swedbank</li>
+            </ul>
         </div>
-        <div class="Forma">
-            <form action="http://localhost:8080/kontaktai" method="POST" target="_blank">
-                <label for="var">Jūsų vardas:  </label>
+        <div class="forma">
+            <form>
+                <label for="var">Jūsų vardas:</label>
                 <input name="firstname" type="text" id="var" required /><br>
-                <label for="eml">E.paštas: </label>
-                <input name="firstname" type="email" id="eml" required /><br>
-                <label for="tel">Telefonas </label>
-                <input name="firstname" type="email" id="tel" required /><br>
-                <label for="var">Pranešimas:</lable><br>
-                <label for="zinute">
-                <textarea name="message" rows="20" cols="50" id="zinute">Tavo zinute.</textarea>
-
-
+    
+                <label for="eml">E. paštas:</label>
+                <input name="epaštas" type="email" id="eml" required /><br>
+    
+                <label for="tel">Telefonas <b>+370</b></label>
+                <input name="telefonas" type="number" oninput="this.value=this.value.slice(0,8)" id="tel" required /><br>
+    
+                <label for="zinute">Pranešimas:</label><br>
+                <textarea name="message" rows="5" cols="50" id="zinute">Tavo žinutė.</textarea><br><br>
+    
+                <button type="submit" onclick="alert('Paspausta Siųsti')">Siųsti</button>
+            </form>
+        </div>
+        <div class="zemelapis"></div>
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.621362732254!2d25.28542541605136!3d54.68695618027988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd941fcd556c69%3A0x420ed31b21948392!2sVilniaus%20katedra!5e0!3m2!1slt!2slt!4v1615655043197!5m2!1slt!2slt" 
+        width="400" 
+        height="400" 
+        style="border:03;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
         </div>
     </main>
-    <footer>???</footer>
+    <footer>Visos teisės saugomos © 2025 Grupė 250407JSM492VAK</footer>
 </body>
 </html>
