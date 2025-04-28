@@ -4,23 +4,23 @@
     box-sizing: border-box;
 }
 
-  .top-nav {
+.top-nav {
     background-color: #5c3d1f;
     padding: 1rem;
-  }
-  
-  .top-nav > ul {
+}
+
+.top-nav>ul {
     list-style: none;
     display: flex;
     justify-content: center;
-  
-  }
-  
-  .top-nav li {
+
+}
+
+.top-nav li {
     margin: 0 1rem;
-  }
-  
-  .top-nav a {
+}
+
+.top-nav a {
     color: white;
     text-decoration: none;
     font-size: 1.55rem;
@@ -29,10 +29,10 @@
     position: relative;
     transition: color 0.3s ease;
     text-shadow: 1px 1px 2px rgb(159, 124, 124);
-  }
-  
-  
-  .top-nav a::after {
+}
+
+
+.top-nav a::after {
     content: '';
     position: absolute;
     height: 2px;
@@ -44,25 +44,25 @@
     transition: width 0.4s ease, opacity 0.4s ease;
     opacity: 0.8;
     box-shadow: 0 2px 4px rgb(159, 124, 124);
-  }
-  
-  
-  .top-nav a:hover::after {
-    width: 100%;
-  }
-  
-  .top-nav a:hover {
-    color: #ffcc99;
-  }
+}
 
-  .top-nav {
+
+.top-nav a:hover::after {
+    width: 100%;
+}
+
+.top-nav a:hover {
+    color: #ffcc99;
+}
+
+.top-nav {
     background-color: #5c3d1f;
     padding: 1rem;
     position: relative;
     box-shadow: 5px 10px 15px rgba(159, 124, 124);
-  }
-  
-  .top-nav::after {
+}
+
+.top-nav::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -73,9 +73,148 @@
     background: linear-gradient(to right, #ffcc99, #ff9900);
     box-shadow: 5px 10px 20px rgba(159, 124, 124);
     transition: width 0.6s ease;
-  }
-  
-  .top-nav:hover::after {
+}
+
+.top-nav:hover::after {
     width: 100%;
-  }
-  
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobilus ekranas */
+@media only screen and (max-width: 575px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-nav li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-nav li {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Planšetės (iPad, kt.) */
+@media (min-width: 768px) and (max-width: 991px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .top-nav li {
+        margin: 0 1rem;
+    }
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    padding: 20px;
+    max-width: 85%;
+
+}
+
+
+
+/* Slepiam checkbox */
+#hamburger-toggle {
+    display: none;
+}
+
+/* Hamburger stilius */
+.hamburger {
+    display: none;
+    /* rodom tik mobile */
+}
+
+/* MOBILE versija su hamburger */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        height: 3px;
+        width: 100%;
+        background-color: rgba(159, 124, 124);
+
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    /* Meniu mobiliai – pradinė būsena */
+    .top-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 200px;
+        height: 100%;
+        background-color: #5c3d1f;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        flex-direction: column;
+    }
+
+    /* Kai hamburger paspaustas – meniu pasirodo */
+    #hamburger-toggle:checked~.top-nav {
+        right: 0;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .top-nav li {
+        text-align: left;
+        margin: 1rem;
+    }
+
+    .top-nav a {
+        font-size: 1.2rem;
+    }
+
+    /* Hamburger animacija */
+    #hamburger-toggle:checked+.hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #hamburger-toggle:checked+.hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger-toggle:checked+.hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
