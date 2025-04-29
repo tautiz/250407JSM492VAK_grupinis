@@ -1,75 +1,102 @@
 <!DOCTYPE html>
 <html lang="lt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
     <title>Grupinis darbas</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
       <input type="checkbox" id="hamburger-toggle" />
       <label for="hamburger-toggle" class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </label>
       <nav class="top-nav">
         <ul>
-            <li><a href="index.html">Pagrindinis</a></li>
-            <li><a href="pages/paslaugos.html">Paslaugos</a></li>
-            <li><a href="#">Kontaktai</a></li>
-            <li><a href="pages/apieMus.html">Apie mus</a></li>
+          <li><a href="index.html">Pagrindinis</a></li>
+          <li><a href="pages/paslaugos.html">Paslaugos</a></li>
+          <li><a href="#">Kontaktai</a></li>
+          <li><a href="pages/apieMus.html">Apie mus</a></li>
         </ul>
-    </nav>
+      </nav>
     </header>
 
     <main>
-        <div class="kontaktai">
-            <ul>
-                <li><b>Kontaktai:</b> Grupė "250407JSM492VAK"</li>
-                <li><b>Tel.:</b> +370 663 66111</li>
-                <li><b>E. paštas:</b> darbas@darbas.lt</li>
-                <li><b>Adresas:</b> Gatvė 3 namas 5</li>
-                <li><b>Įmonės kodas:</b> 1000235</li>
-                <li><b>PVM kodas:</b> LT100023511</li>
-                <li><b>Sąskaita:</b> LT48 7300 0101 0000 0000 Swedbank</li>
-            </ul>
-        </div>
+      <ul class="contact-list">
+        <li>
+          <span class="label">Kontaktai:</span
+          ><span class="value">Grupė "250407JSM492VAK"</span>
+        </li>
+        <li>
+          <span class="label">Tel.:</span
+          ><span class="value">+370 663 66111</span>
+        </li>
+        <li>
+          <span class="label">E. paštas:</span
+          ><span class="value">darbas@darbas.lt</span>
+        </li>
+        <li>
+          <span class="label">Adresas:</span
+          ><span class="value"> Gatvė 3 namas 5</span>
+        </li>
+        <li>
+          <span class="label">Įmonės kodas:</span
+          ><span class="value">1000235</span>
+        </li>
+        <li>
+          <span class="label">PVM kodas:</span
+          ><span class="value">LT100023511</span>
+        </li>
+        <li>
+          <span class="label">Sąskaita:</span
+          ><span class="value"> LT48 7300 0101 0000 0000 Swedbank</span>
+        </li>
+      </ul>
+      <section>
+        <form>
+          <div class="form-group">
+            <label for="var">Jūsų vardas:</label>
+            <input name="firstname" type="text" id="var"  placeholder="Vardenis" />
+          </div>
 
-        <div class="forma">
-            <form>
-                <label for="var">Jūsų vardas:</label>
-                <input name="firstname" type="text" id="var" required /><br>
+          <div class="form-group">
+            <label for="eml">Jūsų el. paštas:</label>
+            <input name="epaštas" type="email" id="eml" placeholder="jūsų@paštas.lt" required />
+          </div>
 
-                <label for="eml">E. paštas:</label>
-                <input name="epaštas" type="email" id="eml" required /><br>
+          <div class="form-group">
+            <label for="tel">Jūsų Tel.Nr.:</label>
+            <input name="telefonas" type="tel" id="tel" value="+370" required />
+          </div>
 
-                <label for="tel">Telefonas <b>+370</b></label>
-                <input name="telefonas" type="number" oninput="this.value=this.value.slice(0,8)" id="tel" required /><br>
-
-                <label for="zinute">Pranešimas:</label><br>
-                <textarea name="message" rows="5" cols="50" id="zinute">Tavo žinutė.</textarea><br><br>
-
-                <button type="submit" onclick="alert('Paspausta Siųsti')">Siųsti</button>
-            </form>
-        </div>
-
-        <div class="zemelapis">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.621362732254!2d25.28542541605136!3d54.68695618027988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd941fcd556c69%3A0x420ed31b21948392!2sVilniaus%20katedra!5e0!3m2!1slt!2slt!4v1615655043197!5m2!1slt!2slt" 
-                width="400" 
-                height="400" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div>
+          <div class="form-group">
+            <label for="zinute">Tavo žinutė:</label>
+            <textarea name="message" rows="5" cols="50" id="zinute"  placeholder="Jūsų pranešimas (neprivaloma)"></textarea>
+            <br /><br />
+          
+          <button type="submit" onclick="alert('Paspausta Siųsti')">
+            Siųsti
+          </button></div>
+        </form>
+      </section>
     </main>
-
+    <section class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d39646.541726673895!2d23.801793721826133!3d54.898829728019905!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e721ecd8dae81b%3A0xe70fc6caeeacd5f3!2sPil%C4%97n%C5%B3%20g.%205%2C%20Akademija%2C%2053351%20Kauno%20r.%20sav.!5e0!3m2!1slt!2slt!4v1745868895397!5m2!1slt!2slt"
+        width="80%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
     <footer>
-        <p>Visos teisės saugomos © 2025 Grupė 250407JSM492VAK</p>
+      <p>Visos teisės saugomos © 2025 Grupė 250407JSM492VAK</p>
     </footer>
-</body>
+  </body>
 </html>

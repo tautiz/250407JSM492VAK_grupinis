@@ -7,6 +7,10 @@
 
 }
 
+body {
+    background-color: #f6f6f6
+}
+
 .top-nav {
     background-color: #5c3d1f;
     padding: 1rem;
@@ -122,15 +126,6 @@
 
 
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2em auto;
-    padding: 20px;
-    max-width: 85%;
-
-}
 
 
 
@@ -142,7 +137,7 @@ main {
 /* Hamburger stilius */
 .hamburger {
     display: none;
-    /* rodom tik mobile */
+
 }
 
 /* MOBILE versija su hamburger */
@@ -213,5 +208,147 @@ main {
 
     #hamburger-toggle:checked+.hamburger span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+main>.contact-list,
+main>section {
+
+    min-width: 80%;
+}
+
+.contact-list {
+    list-style: none;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-list li {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    line-height: 2em;
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 0;
+}
+
+.contact-list li:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+}
+
+.value {
+    color: #555;
+    word-break: break-word;
+}
+span.value:hover {
+    padding-left: 1.25rem;
+    color: #5c3d1f;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+.form-group:last-of-type {
+    border-bottom: none;
+}
+
+form label {
+    text-align: right;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    font-family: inherit;
+    background: #f9f9f9;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(92, 61, 31, 0.5);
+    border-radius: 4px;
+}
+
+form>div>button {
+
+    padding: 0.75rem 2.5rem;
+    background-color: #5c3d1f;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+    width: 100%;
+}
+
+form>div>button:hover {
+    background-color: #ffcc99;
+    color: #5c3d1f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 722px) {
+    main {
+        grid-template-columns: 1fr;
+        /* Vienas stulpelis vietoj dviejų */
     }
 }
